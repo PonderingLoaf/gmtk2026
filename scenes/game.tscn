@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://betrcppjq07df"]
 
 [ext_resource type="PackedScene" uid="uid://b4m6awdrt0ct8" path="res://scenes/dracula.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://d2x5x3oyffn21" path="res://scenes/special.tscn" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://drnbj1wo2rvxd" path="res://scenes/enemy.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://dwcqhipe7qn6a" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
 [ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="5_iywne"]
@@ -12,6 +13,8 @@
 [node name="Dracula" parent="." unique_id=914330343 instance=ExtResource("1_uwrxv")]
 unique_name_in_owner = true
 position = Vector2(484, 270)
+
+[node name="Special" parent="Dracula" unique_id=429835498 instance=ExtResource("2_u5sy4")]
 
 [node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("2_yqjtg")]
 position = Vector2(932, 197)

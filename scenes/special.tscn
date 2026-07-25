@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d2x5x3oyffn21"]
+
+[ext_resource type="Script" uid="uid://c0tlnt5y122q4" path="res://scripts/special.gd" id="1_6hubt"]
+
+[node name="Special" type="Node" unique_id=429835498]
+script = ExtResource("1_6hubt")
+
+[node name="Timer" type="Timer" parent="." unique_id=1359874731]
+wait_time = 10.0

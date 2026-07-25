@@ -8,6 +8,7 @@ const JUMP_VELOCITY = -400.0
 
 const PROJECTILE = preload("uid://bpfhq4ehimh53")
 @onready var game: Node2D = $".."
+@onready var special: Node = $Special
 
 var facing: Vector2 = Vector2(1, 0);
 @onready var timer: Timer = $Timer
@@ -15,9 +16,14 @@ var facing: Vector2 = Vector2(1, 0);
 @export var attack_damage = 1
 @export var attack_cooldown = 0.4
 @export var attack_size = 15
+const BAT = preload("uid://cy5gh3g6y8mq8")
 
 func update_cooldown_timer():
 	timer.wait_time = attack_cooldown
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("action2"):
+		special.activate()
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("action1") and timer.is_stopped():

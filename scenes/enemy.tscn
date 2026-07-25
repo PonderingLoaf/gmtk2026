@@ -6,7 +6,7 @@
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_4gyqm"]
 points = PackedVector2Array(0, -500, 500, 500, -500, 500)
 
-[node name="Enemy" type="Area2D" unique_id=87682965]
+[node name="Enemy" type="Area2D" unique_id=87682965 groups=["enemy"]]
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_md0e3")
 
