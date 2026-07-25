@@ -1,0 +1,3 @@
+res://scenes/game.tscn
+res://scripts/attack_cooldown_button.gd
+res://scripts/enemy.gd

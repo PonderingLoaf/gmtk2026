@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b4m6awdrt0ct8"]
+
+[ext_resource type="Script" uid="uid://csdv7pot5bn74" path="res://scripts/dracula.gd" id="1_bwuyn"]
+[ext_resource type="Texture2D" uid="uid://qu5m8cd1h7h5" path="res://assets/dracula.png" id="1_g5g5v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwuyn"]
+
+[node name="Dracula" type="CharacterBody2D" unique_id=914330343]
+scale = Vector2(3, 3)
+script = ExtResource("1_bwuyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=51695837]
+texture = ExtResource("1_g5g5v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548993834]
+shape = SubResource("CapsuleShape2D_bwuyn")
+
+[node name="Timer" type="Timer" parent="." unique_id=1636807455]
+one_shot = true
