@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dem75gewqpckd" path="res://scenes/enemies/pitchfork-dude.tscn" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="11_kvuet"]
+[ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scenes/camera_controller.gd" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=195425760]
 
@@ -115,6 +116,9 @@ position = Vector2(1161, 414)
 position = Vector2(288, 46)
 scale = Vector2(4.4687505, 4.4687505)
 texture = ExtResource("11_kvuet")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1310798199]
+script = ExtResource("8_gee14")
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="GridContainer/MarginContainer/Damage" to="GridContainer/MarginContainer/Damage" method="_on_pressed"]

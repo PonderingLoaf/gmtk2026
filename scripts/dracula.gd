@@ -27,6 +27,7 @@ func update_cooldown_timer():
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("action2"):
 		special.activate()
+
 	mouse_pos = get_local_mouse_position()
 
 	if mouse_pos.length_squared() > 0.0:

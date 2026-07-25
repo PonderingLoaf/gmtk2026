@@ -14,7 +14,7 @@ var radius: float = 10
 func _ready() -> void:
 	randomize()
 	rotation_speed = randf_range(180, 210)
-	spiral_speed = randf_range(60, 80)
+	spiral_speed = randf_range(30, 50)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
