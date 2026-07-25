@@ -36,4 +36,5 @@ func die():
 	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	dracula.take_damage(damage)
+	if not body.is_in_group("projectile"):
+		dracula.take_damage(damage)
