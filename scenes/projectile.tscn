@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bpfhq4ehimh53"]
 
-[ext_resource type="Texture2D" uid="uid://b60b6fyi7dtjd" path="res://assets/projectile.png" id="1_c8fcr"]
 [ext_resource type="Script" uid="uid://cwwu6if6jo7ks" path="res://scripts/projectile.gd" id="1_q3m7n"]
+[ext_resource type="Texture2D" uid="uid://cflqv8nvki38s" path="res://assets/walking_stick.png" id="2_q3m7n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q3m7n"]
-radius = 5.0
+radius = 11.12
 
 [node name="Projectile" type="Area2D" unique_id=1524203897 groups=["projectile"]]
-scale = Vector2(3, 3)
 script = ExtResource("1_q3m7n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1817465339]
 shape = SubResource("CircleShape2D_q3m7n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1186822918]
-texture = ExtResource("1_c8fcr")
+rotation = -0.7853982
+texture = ExtResource("2_q3m7n")

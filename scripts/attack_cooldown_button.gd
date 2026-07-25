@@ -1,7 +1,5 @@
 extends Button
 
-## usgiusbguidiogseoigbo8weg8oy
-
 @onready var game_manager: Node = %GameManager
 @onready var dracula: CharacterBody2D = %Dracula
 

@@ -1,3 +1,6 @@
 res://scenes/game.tscn
+res://scenes/dracula.tscn
+res://scripts/dracula.gd
+res://scenes/blood.tscn
+res://scenes/projectile.tscn
 res://scripts/attack_cooldown_button.gd
-res://scripts/enemy.gd

@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b4m6awdrt0ct8"]
 
 [ext_resource type="Script" uid="uid://csdv7pot5bn74" path="res://scripts/dracula.gd" id="1_bwuyn"]
-[ext_resource type="Texture2D" uid="uid://qu5m8cd1h7h5" path="res://assets/dracula.png" id="1_g5g5v"]
+[ext_resource type="Texture2D" uid="uid://ljjw2s76wm1a" path="res://assets/dracula_still.png" id="2_bwuyn"]
+[ext_resource type="Texture2D" uid="uid://dmrcnihek07h0" path="res://assets/Untitled.png" id="3_kixt8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwuyn"]
 radius = 5.666667
@@ -11,7 +12,7 @@ scale = Vector2(3, 3)
 script = ExtResource("1_bwuyn")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=51695837]
-texture = ExtResource("1_g5g5v")
+texture = ExtResource("2_bwuyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1548993834]
 shape = SubResource("CapsuleShape2D_bwuyn")
@@ -19,3 +20,8 @@ shape = SubResource("CapsuleShape2D_bwuyn")
 [node name="Timer" type="Timer" parent="." unique_id=1636807455]
 wait_time = 0.4
 one_shot = true
+
+[node name="triangle" type="Sprite2D" parent="." unique_id=132278051]
+position = Vector2(24.000244, 0)
+scale = Vector2(0.005916675, 0.005916675)
+texture = ExtResource("3_kixt8")
