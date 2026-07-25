@@ -6,6 +6,7 @@ extends Area2D
 @onready var progress_bar: ProgressBar = $ProgressBar
 @onready var game: Node2D = $".."
 const BLOOD = preload("uid://ckpp81imw1drd")
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 @export var max_health: float = 3
 @export var damage: float = 1
@@ -20,6 +21,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	position.x = move_toward(position.x, dracula.position.x, delta * SPEED)
 	position.y = move_toward(position.y, dracula.position.y, delta * SPEED)
+	if dracula.position.x < position.x:
+		animated_sprite_2d.flip_h = false
+	else:
+		animated_sprite_2d.flip_h = true
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("projectile"):

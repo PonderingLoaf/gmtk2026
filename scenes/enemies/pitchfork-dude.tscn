@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dem75gewqpckd"]
+
+[ext_resource type="PackedScene" uid="uid://drnbj1wo2rvxd" path="res://scenes/enemy.tscn" id="1_epyst"]
+[ext_resource type="Texture2D" uid="uid://dtlnvwfhg381k" path="res://assets/pitchfork-dude.png" id="2_xj5yi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
+size = Vector2(320.0001, 910.0002)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mafxv"]
+atlas = ExtResource("2_xj5yi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y23k8"]
+atlas = ExtResource("2_xj5yi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2akv"]
+atlas = ExtResource("2_xj5yi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_md0e3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mafxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y23k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2akv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a35do"]
+size = Vector2(479.99994, 480.00012)
+
+[node name="Enemy" unique_id=87682965 instance=ExtResource("1_epyst")]
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=371164891]
+position = Vector2(30.000006, 64.99994)
+scale = Vector2(0.99999964, 0.99999964)
+shape = SubResource("RectangleShape2D_4ra3w")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=307164580]
+scale = Vector2(64, 64)
+sprite_frames = SubResource("SpriteFrames_md0e3")
+autoplay = "default"
+frame_progress = 0.051086962
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="3" unique_id=1110605910]
+position = Vector2(-279.99982, -239.99995)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_a35do")

@@ -1,6 +1,6 @@
 extends Node
 
-const ENEMY = preload("uid://drnbj1wo2rvxd")
+const ENEMY = preload("uid://dem75gewqpckd")
 @onready var game: Node2D = $".."
 @onready var dracula: CharacterBody2D = $"../Dracula"
 @onready var label: Label = $Label
@@ -17,4 +17,4 @@ func increase_score() -> void:
 	update_label()
 
 func update_label():
-	label.text = "Score: " + str(score)
+	label.text = str(score)

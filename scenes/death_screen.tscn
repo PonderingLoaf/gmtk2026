@@ -1,28 +1,39 @@
 [gd_scene format=3 uid="uid://dwpkxxjhfvi7m"]
 
-[ext_resource type="Script" uid="uid://dxpjwstv161py" path="res://scripts/button.gd" id="1_uyutr"]
+[ext_resource type="Script" uid="uid://dxpjwstv161py" path="res://scripts/death_screen_menu.gd" id="1_uyutr"]
+[ext_resource type="PackedScene" uid="uid://do6tkw0jytr5m" path="res://scenes/styled_button.tscn" id="2_dwo6e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_itto5"]
 font_size = 90
 
 [node name="DeathScreen" type="Node2D" unique_id=2065708332]
+script = ExtResource("1_uyutr")
 
 [node name="Label" type="Label" parent="." unique_id=544497659]
 offset_left = 71.0
 offset_top = 37.0
-offset_right = 1078.0
+offset_right = 1855.0
 offset_bottom = 434.0
 text = "Count (Dracula) Down"
 label_settings = SubResource("LabelSettings_itto5")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1241661723]
-offset_left = 441.0
-offset_top = 401.0
-offset_right = 749.0
-offset_bottom = 548.0
+[node name="Restart" parent="." unique_id=1227806314 instance=ExtResource("2_dwo6e")]
+offset_left = 738.0
+offset_top = 389.0
+offset_right = 1248.0
+offset_bottom = 564.0
+theme_override_font_sizes/font_size = 71
 text = "Restart"
-script = ExtResource("1_uyutr")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Quit" parent="." unique_id=1634534739 instance=ExtResource("2_dwo6e")]
+offset_left = 671.0
+offset_top = 618.0
+offset_right = 1308.0
+offset_bottom = 793.0
+theme_override_font_sizes/font_size = 71
+text = "Return To Title"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

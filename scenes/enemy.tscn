@@ -6,6 +6,17 @@
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_4gyqm"]
 points = PackedVector2Array(0, -500, 500, 500, -500, 500)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_a35do"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k104")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Enemy" type="Area2D" unique_id=87682965 groups=["enemy"]]
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_md0e3")
@@ -13,8 +24,8 @@ script = ExtResource("1_md0e3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=371164891]
 shape = SubResource("ConvexPolygonShape2D_4gyqm")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=518211112]
-texture = ExtResource("1_7k104")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=307164580]
+sprite_frames = SubResource("SpriteFrames_a35do")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=268162952]
 offset_left = -489.99994

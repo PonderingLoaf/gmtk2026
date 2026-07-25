@@ -19,21 +19,14 @@ var attack_direction: Vector2 = Vector2(1, 0)
 
 @export var attack_damage = 1
 @export var attack_cooldown = 0.4
-<<<<<<< HEAD
 @export var attack_size = 10
-=======
-@export var attack_size = 15
-const BAT = preload("uid://cy5gh3g6y8mq8")
->>>>>>> 7681da27ec4593708664a67cce338d1e429f8d42
 
 func update_cooldown_timer():
 	timer.wait_time = attack_cooldown
-	
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("action2"):
 		special.activate()
-
-func _process(delta: float) -> void:
 	mouse_pos = get_local_mouse_position()
 
 	if mouse_pos.length_squared() > 0.0:

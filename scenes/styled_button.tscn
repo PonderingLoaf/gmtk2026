@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://do6tkw0jytr5m"]
+
+[ext_resource type="FontFile" uid="uid://dyv81mk2dmo4t" path="res://assets/Minecraft.ttf" id="1_4vsgu"]
+[ext_resource type="Texture2D" uid="uid://d3s8x3i7p18fb" path="res://assets/ui_unselected.png" id="1_clwuy"]
+[ext_resource type="Texture2D" uid="uid://dxa8vsilfeoih" path="res://assets/ui_clicked.png" id="2_4vsgu"]
+[ext_resource type="Texture2D" uid="uid://dr5ovubwmcef6" path="res://assets/ui_selected.png" id="3_noaac"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cadcp"]
+texture = ExtResource("1_clwuy")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04y3m"]
+texture = ExtResource("2_4vsgu")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onlox"]
+texture = ExtResource("3_noaac")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+
+[node name="Styled Button" type="Button" unique_id=1227806314]
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 209.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("1_4vsgu")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxTexture_cadcp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_04y3m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_onlox")

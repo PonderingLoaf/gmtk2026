@@ -1,5 +1,7 @@
 extends Node
-const BAT = preload("uid://cy5gh3g6y8mq8")
+
+const BAT = preload("res://scenes/bat.tscn")
+
 @onready var game: Node2D = $"../.."
 @onready var dracula: CharacterBody2D = %Dracula
 

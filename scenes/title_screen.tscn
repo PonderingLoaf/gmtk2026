@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dhahk1ml5u3qh"]
+
+[ext_resource type="PackedScene" uid="uid://do6tkw0jytr5m" path="res://scenes/styled_button.tscn" id="1_s4lrb"]
+[ext_resource type="FontFile" uid="uid://dyv81mk2dmo4t" path="res://assets/Minecraft.ttf" id="2_mgrm8"]
+[ext_resource type="Script" uid="uid://bnfkdndj328b" path="res://scripts/menu.gd" id="3_dc4i4"]
+
+[node name="Title Screen" type="Node2D" unique_id=1584354965]
+
+[node name="Styled Button" parent="." unique_id=1227806314 instance=ExtResource("1_s4lrb")]
+offset_left = 816.0
+offset_top = 465.0
+offset_right = 1099.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("2_mgrm8")
+theme_override_font_sizes/font_size = 72
+text = "Play"
+script = ExtResource("3_dc4i4")
+
+[connection signal="pressed" from="Styled Button" to="Styled Button" method="_on_pressed"]

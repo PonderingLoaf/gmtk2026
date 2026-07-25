@@ -2,11 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://b4m6awdrt0ct8" path="res://scenes/dracula.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://d2x5x3oyffn21" path="res://scenes/special.tscn" id="2_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://drnbj1wo2rvxd" path="res://scenes/enemy.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://dwcqhipe7qn6a" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
-[ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="5_iywne"]
+[ext_resource type="FontFile" uid="uid://dyv81mk2dmo4t" path="res://assets/Minecraft.ttf" id="4_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://do6tkw0jytr5m" path="res://scenes/styled_button.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cp1nlg4n3sjq2" path="res://scripts/attack_cooldown_button.gd" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="6_0tnpc"]
 [ext_resource type="Script" uid="uid://n0i8h802liv2" path="res://scripts/attack_range_button.gd" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://dem75gewqpckd" path="res://scenes/enemies/pitchfork-dude.tscn" id="10_dinhu"]
+[ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="11_kvuet"]
 
 [node name="Game" type="Node2D" unique_id=195425760]
 
@@ -15,9 +19,6 @@ unique_name_in_owner = true
 position = Vector2(484, 270)
 
 [node name="Special" parent="Dracula" unique_id=429835498 instance=ExtResource("2_u5sy4")]
-
-[node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("2_yqjtg")]
-position = Vector2(932, 197)
 
 [node name="GameManager" type="Node" parent="." unique_id=322479204]
 unique_name_in_owner = true
@@ -28,46 +29,95 @@ autostart = true
 
 [node name="Label" type="Label" parent="GameManager" unique_id=944597020]
 anchors_preset = -1
-offset_left = 15.0
-offset_top = 52.0
-offset_right = 145.0
-offset_bottom = 94.0
-text = "Blood: 0"
+offset_left = 314.0
+offset_top = 27.0
+offset_right = 464.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("4_kvpfn")
+theme_override_font_sizes/font_size = 45
+text = "0"
 
-[node name="AttackDamageButton" type="Button" parent="." unique_id=781025725]
-offset_left = 40.0
-offset_top = 543.0
-offset_right = 153.0
-offset_bottom = 609.0
-text = "Attack Damage
-1 -> 1.5
-Level 1
-Cost: $10"
-script = ExtResource("5_iywne")
+[node name="GridContainer" type="GridContainer" parent="." unique_id=537651613]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 255.99997
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="AttackCooldownButton" type="Button" parent="." unique_id=903786146]
-offset_left = 204.0
-offset_top = 543.0
-offset_right = 330.0
-offset_bottom = 643.0
-text = "Attack Cooldown
-0.40s -> 0.36s
-Level 1
-Cost: $10"
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer" unique_id=1288087678]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Damage" parent="GridContainer/MarginContainer" unique_id=1227806314 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_0tnpc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="GridContainer" unique_id=431745801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Cooldown" parent="GridContainer/MarginContainer2" unique_id=419780624 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("5_p57ef")
 
-[node name="AttackSizeButton" type="Button" parent="." unique_id=1565660588]
-offset_left = 385.0
-offset_top = 543.0
-offset_right = 524.0
-offset_bottom = 643.0
-text = "Attack Cooldown
-0.40s -> 0.36s
-Level 1
-Cost: $10"
+[node name="MarginContainer3" type="MarginContainer" parent="GridContainer" unique_id=1115023914]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Ranged" parent="GridContainer/MarginContainer3" unique_id=1958966978 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("6_p57ef")
 
+[node name="MarginContainer4" type="MarginContainer" parent="GridContainer" unique_id=1861578805]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Special" parent="GridContainer/MarginContainer4" unique_id=1713024301 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("8_gee14")
+
+[node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("10_dinhu")]
+position = Vector2(1161, 414)
+
+[node name="Blood" type="Sprite2D" parent="." unique_id=969161753]
+position = Vector2(288, 46)
+scale = Vector2(4.4687505, 4.4687505)
+texture = ExtResource("11_kvuet")
+
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
-[connection signal="pressed" from="AttackDamageButton" to="AttackDamageButton" method="_on_pressed"]
-[connection signal="pressed" from="AttackCooldownButton" to="AttackCooldownButton" method="_on_pressed"]
-[connection signal="pressed" from="AttackSizeButton" to="AttackSizeButton" method="_on_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer/Damage" to="GridContainer/MarginContainer/Damage" method="_on_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer2/Cooldown" to="GridContainer/MarginContainer2/Cooldown" method="_on_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer3/Ranged" to="GridContainer/MarginContainer3/Ranged" method="_on_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer4/Special" to="GridContainer/MarginContainer4/Special" method="_on_pressed"]
