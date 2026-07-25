@@ -5,4 +5,4 @@ extends Camera2D
 
 func _process(delta: float) -> void:
 	if drac:
-		global_position = global_position.lerp(drac.global_position, weight * delta)
+		global_position = global_position.lerp(Vector2(drac.global_position.x - 960, drac.global_position.y - 540), weight * delta)

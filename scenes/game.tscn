@@ -8,27 +8,232 @@
 [ext_resource type="Script" uid="uid://cp1nlg4n3sjq2" path="res://scripts/attack_cooldown_button.gd" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="6_0tnpc"]
 [ext_resource type="Script" uid="uid://n0i8h802liv2" path="res://scripts/attack_range_button.gd" id="6_p57ef"]
-[ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="8_gee14"]
+[ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scripts/camera_controller.gd" id="8_gee14"]
+[ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="9_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dem75gewqpckd" path="res://scenes/enemies/pitchfork-dude.tscn" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="11_kvuet"]
-[ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scenes/camera_controller.gd" id="8_gee14"]
+[ext_resource type="Texture2D" uid="uid://b0icxoiwj7fdd" path="res://assets/special-cooldown-spritesheet.png" id="13_kvuet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(0, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(21, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(42, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rysoc"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(63, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssvqc"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(84, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(105, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(126, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5newe"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(147, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37s47"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(168, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5mj"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(189, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1j6l"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(210, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl11u"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(231, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhx41"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(252, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qnb83"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(273, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sww3w"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(294, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suyxu"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(315, 0, 21, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgl2t"]
+atlas = ExtResource("13_kvuet")
+region = Rect2(336, 0, 21, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a35do"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trtic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir15t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca42v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rysoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ssvqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_264po")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kice")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5newe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37s47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt5mj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1j6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl11u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhx41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qnb83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sww3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suyxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgl2t")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Game" type="Node2D" unique_id=195425760]
 
 [node name="Dracula" parent="." unique_id=914330343 instance=ExtResource("1_uwrxv")]
 unique_name_in_owner = true
-position = Vector2(484, 270)
+position = Vector2(472.00003, 274)
 
 [node name="Special" parent="Dracula" unique_id=429835498 instance=ExtResource("2_u5sy4")]
 
-[node name="GameManager" type="Node" parent="." unique_id=322479204]
+[node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("10_dinhu")]
+position = Vector2(1161, 414)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1310798199]
+offset = Vector2(960, 540)
+script = ExtResource("8_gee14")
+
+[node name="GameManager" type="Node" parent="Camera2D" unique_id=322479204]
 unique_name_in_owner = true
 script = ExtResource("3_lnu2h")
 
-[node name="Timer" type="Timer" parent="GameManager" unique_id=891516843]
+[node name="Timer" type="Timer" parent="Camera2D/GameManager" unique_id=891516843]
 autostart = true
 
-[node name="Label" type="Label" parent="GameManager" unique_id=944597020]
+[node name="GridContainer" type="GridContainer" parent="Camera2D" unique_id=537651613]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 255.99997
+offset_bottom = 1080.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+offset_transform_enabled = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1288087678]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Damage" parent="Camera2D/GridContainer/MarginContainer" unique_id=1227806314 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_0tnpc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=431745801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Cooldown" parent="Camera2D/GridContainer/MarginContainer2" unique_id=419780624 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("5_p57ef")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1115023914]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Ranged" parent="Camera2D/GridContainer/MarginContainer3" unique_id=1958966978 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("6_p57ef")
+
+[node name="MarginContainer4" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1861578805]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Special" parent="Camera2D/GridContainer/MarginContainer4" unique_id=1713024301 instance=ExtResource("5_iywne")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("9_dinhu")
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=944597020]
 anchors_preset = -1
 offset_left = 314.0
 offset_top = 27.0
@@ -38,90 +243,23 @@ theme_override_fonts/font = ExtResource("4_kvpfn")
 theme_override_font_sizes/font_size = 45
 text = "0"
 
-[node name="GridContainer" type="GridContainer" parent="." unique_id=537651613]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 255.99997
-offset_bottom = 1080.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="GridContainer" unique_id=1288087678]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Damage" parent="GridContainer/MarginContainer" unique_id=1227806314 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("6_0tnpc")
-
-[node name="MarginContainer2" type="MarginContainer" parent="GridContainer" unique_id=431745801]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Cooldown" parent="GridContainer/MarginContainer2" unique_id=419780624 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("5_p57ef")
-
-[node name="MarginContainer3" type="MarginContainer" parent="GridContainer" unique_id=1115023914]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Ranged" parent="GridContainer/MarginContainer3" unique_id=1958966978 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("6_p57ef")
-
-[node name="MarginContainer4" type="MarginContainer" parent="GridContainer" unique_id=1861578805]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Special" parent="GridContainer/MarginContainer4" unique_id=1713024301 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("8_gee14")
-
-[node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("10_dinhu")]
-position = Vector2(1161, 414)
-
-[node name="Blood" type="Sprite2D" parent="." unique_id=969161753]
+[node name="Blood" type="Sprite2D" parent="Camera2D" unique_id=969161753]
 position = Vector2(288, 46)
 scale = Vector2(4.4687505, 4.4687505)
 texture = ExtResource("11_kvuet")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1310798199]
-script = ExtResource("8_gee14")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D" unique_id=648183145]
+position = Vector2(1820, 978)
+scale = Vector2(7.1000004, 7.1)
+sprite_frames = SubResource("SpriteFrames_a35do")
+frame = 16
 
-[connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
-[connection signal="pressed" from="GridContainer/MarginContainer/Damage" to="GridContainer/MarginContainer/Damage" method="_on_pressed"]
-[connection signal="pressed" from="GridContainer/MarginContainer2/Cooldown" to="GridContainer/MarginContainer2/Cooldown" method="_on_pressed"]
-[connection signal="pressed" from="GridContainer/MarginContainer3/Ranged" to="GridContainer/MarginContainer3/Ranged" method="_on_pressed"]
-[connection signal="pressed" from="GridContainer/MarginContainer4/Special" to="GridContainer/MarginContainer4/Special" method="_on_pressed"]
+[node name="Timer" type="Timer" parent="Camera2D/AnimatedSprite2D" unique_id=1348156224]
+wait_time = 16.0
+one_shot = true
+
+[connection signal="timeout" from="Camera2D/GameManager/Timer" to="Camera2D/GameManager" method="_on_timer_timeout"]
+[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer/Damage" to="Camera2D/GridContainer/MarginContainer/Damage" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer2/Cooldown" to="Camera2D/GridContainer/MarginContainer2/Cooldown" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer3/Ranged" to="Camera2D/GridContainer/MarginContainer3/Ranged" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer4/Special" to="Camera2D/GridContainer/MarginContainer4/Special" method="_on_pressed"]

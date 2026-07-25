@@ -1,9 +1,9 @@
 extends Node
 
 const ENEMY = preload("uid://dem75gewqpckd")
-@onready var game: Node2D = $".."
-@onready var dracula: CharacterBody2D = $"../Dracula"
-@onready var label: Label = $Label
+@onready var game: Node2D = $"../.."
+@onready var dracula: CharacterBody2D = $"../../Dracula"
+@onready var label: Label = $"../Label"
 
 var score: int = 0;
 

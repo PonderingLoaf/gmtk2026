@@ -21,12 +21,21 @@ var attack_direction: Vector2 = Vector2(1, 0)
 @export var attack_cooldown = 0.4
 @export var attack_size = 10
 
+@export var special_bat_count = 3
+@export var special_bat_damage = 2
+
 func update_cooldown_timer():
 	timer.wait_time = attack_cooldown
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $"../Camera2D/AnimatedSprite2D"
+@onready var special_timer: Timer = $"../Camera2D/AnimatedSprite2D/Timer"
+
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("action2"):
-		special.activate()
+	if Input.is_action_just_pressed("action2") and special_timer.is_stopped():
+		special.activate(special_bat_count, special_bat_damage)
+		special_timer.start()
+		animated_sprite_2d.frame = 0
+		animated_sprite_2d.play()
 
 	mouse_pos = get_local_mouse_position()
 

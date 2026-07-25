@@ -7,9 +7,10 @@ const BAT = preload("res://scenes/bat.tscn")
 
 var special = "bats"
 
-func activate():
+func activate(amount, damage):
 	if special == "bats":
-		for i in range(3):
+		for i in range(amount):
 			var bat = BAT.instantiate()
 			bat.position = dracula.position
+			bat.damage = damage
 			game.add_child(bat)
