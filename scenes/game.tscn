@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="5_iywne"]
 [ext_resource type="Script" uid="uid://cp1nlg4n3sjq2" path="res://scripts/attack_cooldown_button.gd" id="5_p57ef"]
 [ext_resource type="Script" uid="uid://n0i8h802liv2" path="res://scripts/attack_range_button.gd" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scenes/camera_controller.gd" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=195425760]
 
@@ -37,8 +38,8 @@ text = "Blood: 0"
 [node name="AttackDamageButton" type="Button" parent="." unique_id=781025725]
 offset_left = 40.0
 offset_top = 543.0
-offset_right = 153.0
-offset_bottom = 609.0
+offset_right = 166.0
+offset_bottom = 643.0
 text = "Attack Damage
 1 -> 1.5
 Level 1
@@ -48,7 +49,7 @@ script = ExtResource("5_iywne")
 [node name="AttackCooldownButton" type="Button" parent="." unique_id=903786146]
 offset_left = 204.0
 offset_top = 543.0
-offset_right = 330.0
+offset_right = 343.0
 offset_bottom = 643.0
 text = "Attack Cooldown
 0.40s -> 0.36s
@@ -66,6 +67,9 @@ text = "Attack Cooldown
 Level 1
 Cost: $10"
 script = ExtResource("6_p57ef")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1310798199]
+script = ExtResource("8_gee14")
 
 [connection signal="timeout" from="GameManager/Timer" to="GameManager" method="_on_timer_timeout"]
 [connection signal="pressed" from="AttackDamageButton" to="AttackDamageButton" method="_on_pressed"]

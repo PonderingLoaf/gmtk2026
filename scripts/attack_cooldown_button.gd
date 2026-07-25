@@ -20,5 +20,5 @@ func _on_pressed() -> void:
 		game_manager.update_label() # update the blood display
 		level += 1
 		dracula.attack_cooldown = cooldowns[level] # updates dracula's attack cooldown
-		dracula.update_cooldown_timers() # updates dracula's timer node to the new cooldown time
+		dracula.update_cooldown_timer() # updates dracula's timer node to the new cooldown time
 		update()

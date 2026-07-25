@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 res://scenes/game.tscn
-res://scenes/dracula.tscn
 res://scripts/dracula.gd
-res://scenes/blood.tscn
-res://scenes/projectile.tscn
-res://scripts/attack_cooldown_button.gd
-=======
-res://scenes/bat.tscn
-res://scenes/enemy.tscn
-res://scripts/enemy.gd
 res://scripts/bat.gd
-res://scenes/game.tscn
-res://scripts/special.gd
-res://scenes/special.tscn
-res://scripts/dracula.gd
->>>>>>> 7681da27ec4593708664a67cce338d1e429f8d42
+res://scenes/camera_controller.gd
+res://scripts/attack_cooldown_button.gd
+res://scenes/main.tscn
