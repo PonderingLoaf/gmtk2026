@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://n0i8h802liv2" path="res://scripts/attack_range_button.gd" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scripts/camera_controller.gd" id="8_gee14"]
 [ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="9_dinhu"]
-[ext_resource type="PackedScene" uid="uid://dem75gewqpckd" path="res://scenes/enemies/pitchfork-dude.tscn" id="10_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="11_kvuet"]
 [ext_resource type="Texture2D" uid="uid://b0icxoiwj7fdd" path="res://assets/special-cooldown-spritesheet.png" id="13_kvuet"]
 
@@ -149,9 +148,6 @@ position = Vector2(472.00003, 274)
 
 [node name="Special" parent="Dracula" unique_id=429835498 instance=ExtResource("2_u5sy4")]
 
-[node name="Enemy" parent="." unique_id=87682965 instance=ExtResource("10_dinhu")]
-position = Vector2(1161, 414)
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1310798199]
 offset = Vector2(960, 540)
 script = ExtResource("8_gee14")
@@ -161,6 +157,7 @@ unique_name_in_owner = true
 script = ExtResource("3_lnu2h")
 
 [node name="Timer" type="Timer" parent="Camera2D/GameManager" unique_id=891516843]
+wait_time = 8.0
 autostart = true
 
 [node name="GridContainer" type="GridContainer" parent="Camera2D" unique_id=537651613]

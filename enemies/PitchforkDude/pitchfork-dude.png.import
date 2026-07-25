@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtlnvwfhg381k"
-path="res://.godot/imported/pitchfork-dude.png-65f789b8506c2fad996813431de67b99.ctex"
+path="res://.godot/imported/pitchfork-dude.png-82f8b2145ee83d58a288729ec609e8fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pitchfork-dude.png"
-dest_files=["res://.godot/imported/pitchfork-dude.png-65f789b8506c2fad996813431de67b99.ctex"]
+source_file="res://enemies/PitchforkDude/pitchfork-dude.png"
+dest_files=["res://.godot/imported/pitchfork-dude.png-82f8b2145ee83d58a288729ec609e8fc.ctex"]
 
 [params]
 
