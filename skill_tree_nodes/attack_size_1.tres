@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://ncus7e5dateq"]
+
+[ext_resource type="Texture2D" uid="uid://dh1rw24yxuleb" path="res://assets/skill_tree_icons/can_buy/sword_size.png" id="1_xog3q"]
+[ext_resource type="Texture2D" uid="uid://cnitkky7jaswt" path="res://assets/skill_tree_icons/cannot_buy/sword_size.png" id="2_dsn0j"]
+[ext_resource type="Script" uid="uid://rpk1yuwxtc1u" path="res://skill_data.gd" id="3_0faix"]
+[ext_resource type="Resource" uid="uid://cnj5q815j64y3" path="res://skill_tree_nodes/bat_special.tres" id="4_8ko1b"]
+[ext_resource type="Texture2D" uid="uid://ceqnxrtt4x2cj" path="res://assets/skill_tree_icons/bought/sword_size.png" id="5_j88se"]
+
+[resource]
+script = ExtResource("3_0faix")
+skill_name = "Larger Weild"
+description = "Increase the size of your weapon"
+cannot_buy_texture = ExtResource("2_dsn0j")
+can_buy_texture = ExtResource("1_xog3q")
+unlocked_texture = ExtResource("5_j88se")
+requirements = Array[ExtResource("3_0faix")]([ExtResource("4_8ko1b")])
+stat_changes = {
+"attack_size": 3
+}
+blood_price = 20
+metadata/_custom_type_script = "uid://rpk1yuwxtc1u"

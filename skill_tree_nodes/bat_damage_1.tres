@@ -9,9 +9,13 @@
 [resource]
 script = ExtResource("1_uq341")
 skill_name = "Stronger Bats"
-description = "Bat Damage 2 -> 5"
+description = "Increase the damage that each bat deals"
 cannot_buy_texture = ExtResource("2_lx0mr")
 can_buy_texture = ExtResource("1_ryfq2")
 unlocked_texture = ExtResource("4_761co")
 requirements = Array[ExtResource("1_uq341")]([ExtResource("4_lx0mr")])
+stat_changes = {
+"bat_damage": 3
+}
+blood_price = 30
 metadata/_custom_type_script = "uid://rpk1yuwxtc1u"

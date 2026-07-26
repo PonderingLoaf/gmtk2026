@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cl01jrowfednt"]
+
+[ext_resource type="Script" uid="uid://rpk1yuwxtc1u" path="res://skill_data.gd" id="1_3cprq"]
+[ext_resource type="Texture2D" uid="uid://c0y0omwjo300m" path="res://assets/skill_tree_icons/can_buy/sword_damage.png" id="1_wrm7t"]
+[ext_resource type="Texture2D" uid="uid://c4oragq0hg5vi" path="res://assets/skill_tree_icons/cannot_buy/sword_damage.png" id="2_wui1n"]
+[ext_resource type="Resource" uid="uid://cnj5q815j64y3" path="res://skill_tree_nodes/bat_special.tres" id="4_um2h2"]
+[ext_resource type="Texture2D" uid="uid://cshx1so644j2v" path="res://assets/skill_tree_icons/bought/sword_damage.png" id="5_6gn8u"]
+
+[resource]
+script = ExtResource("1_3cprq")
+skill_name = "Sharper Blade"
+description = "Increases the damage dealth by the sword"
+cannot_buy_texture = ExtResource("2_wui1n")
+can_buy_texture = ExtResource("1_wrm7t")
+unlocked_texture = ExtResource("5_6gn8u")
+requirements = Array[ExtResource("1_3cprq")]([ExtResource("4_um2h2")])
+stat_changes = {
+"sword_damage": 0.5
+}
+blood_price = 15
+metadata/_custom_type_script = "uid://rpk1yuwxtc1u"

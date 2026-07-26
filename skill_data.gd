@@ -9,3 +9,4 @@ extends Resource
 @export var requirements: Array[SkillData] = []
 @export var stat_changes: Dictionary = {}
 @export var is_unlocked: bool = false
+@export var blood_price: int = 0

@@ -11,6 +11,12 @@ var difficulty = 1.0
 
 var score: int = 0;
 
+func can_afford(amount: int) -> bool:
+	if score >= amount:
+		return true
+	else:
+		return false
+
 func _on_timer_timeout() -> void:
 	var wave = randf_range(0, difficulty)
 	if wave > 5:
@@ -23,6 +29,10 @@ func _on_timer_timeout() -> void:
 
 func increase_score() -> void:
 	score += 1
+	update_label()
+
+func decrease_score(amount: int):
+	score -= amount
 	update_label()
 
 func update_label():

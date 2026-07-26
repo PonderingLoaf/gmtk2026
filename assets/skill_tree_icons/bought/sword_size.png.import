@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc8lmxdpsst2m"
-path="res://.godot/imported/bat_specialt.png-ffe75b1f6bfe775c393c133cd097c8fd.ctex"
+uid="uid://ceqnxrtt4x2cj"
+path="res://.godot/imported/sword_size.png-6af52eff3a2e136b675a221f0e09ba5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/skill_tree_icons/bought/bat_specialt.png"
-dest_files=["res://.godot/imported/bat_specialt.png-ffe75b1f6bfe775c393c133cd097c8fd.ctex"]
+source_file="res://assets/skill_tree_icons/bought/sword_size.png"
+dest_files=["res://.godot/imported/sword_size.png-6af52eff3a2e136b675a221f0e09ba5b.ctex"]
 
 [params]
 

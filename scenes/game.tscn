@@ -4,14 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://d2x5x3oyffn21" path="res://scenes/special.tscn" id="2_u5sy4"]
 [ext_resource type="Script" uid="uid://dwcqhipe7qn6a" path="res://scripts/enemy_spawner.gd" id="3_lnu2h"]
 [ext_resource type="FontFile" uid="uid://dyv81mk2dmo4t" path="res://assets/Minecraft.ttf" id="4_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://do6tkw0jytr5m" path="res://scenes/styled_button.tscn" id="5_iywne"]
-[ext_resource type="Script" uid="uid://cp1nlg4n3sjq2" path="res://scripts/attack_cooldown_button.gd" id="5_p57ef"]
-[ext_resource type="Script" uid="uid://f3lualh11goo" path="res://scripts/attack_damage_button.gd" id="6_0tnpc"]
-[ext_resource type="Script" uid="uid://n0i8h802liv2" path="res://scripts/attack_range_button.gd" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://c3eivsdsqpa1b" path="res://scripts/camera_controller.gd" id="8_gee14"]
-[ext_resource type="Script" uid="uid://c34gji3bv435p" path="res://scripts/special_attack_button.gd" id="9_dinhu"]
 [ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="11_kvuet"]
+[ext_resource type="Script" uid="uid://b5gdm6gidovj4" path="res://scenes/toggle_skill_tree.gd" id="13_ir15t"]
 [ext_resource type="Texture2D" uid="uid://b0icxoiwj7fdd" path="res://assets/special-cooldown-spritesheet.png" id="13_kvuet"]
+[ext_resource type="PackedScene" uid="uid://byuv1ihi4ap8r" path="res://skill_tree.tscn" id="13_trtic"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
 atlas = ExtResource("13_kvuet")
@@ -140,6 +137,9 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtic"]
+bg_color = Color(0, 0, 0.039215688, 1)
+
 [node name="Game" type="Node2D" unique_id=195425760]
 
 [node name="Dracula" parent="." unique_id=914330343 instance=ExtResource("1_uwrxv")]
@@ -160,88 +160,18 @@ script = ExtResource("3_lnu2h")
 wait_time = 8.0
 autostart = true
 
-[node name="GridContainer" type="GridContainer" parent="Camera2D" unique_id=537651613]
-anchors_preset = 10
-anchor_right = 1.0
-offset_right = 255.99997
-offset_bottom = 1080.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-offset_transform_enabled = true
-
-[node name="MarginContainer" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1288087678]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Damage" parent="Camera2D/GridContainer/MarginContainer" unique_id=1227806314 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("6_0tnpc")
-
-[node name="MarginContainer2" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=431745801]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Cooldown" parent="Camera2D/GridContainer/MarginContainer2" unique_id=419780624 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("5_p57ef")
-
-[node name="MarginContainer3" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1115023914]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Ranged" parent="Camera2D/GridContainer/MarginContainer3" unique_id=1958966978 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("6_p57ef")
-
-[node name="MarginContainer4" type="MarginContainer" parent="Camera2D/GridContainer" unique_id=1861578805]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 12
-theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 12
-
-[node name="Special" parent="Camera2D/GridContainer/MarginContainer4" unique_id=1713024301 instance=ExtResource("5_iywne")]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("9_dinhu")
-
 [node name="Label" type="Label" parent="Camera2D" unique_id=944597020]
 anchors_preset = -1
-offset_left = 314.0
-offset_top = 27.0
-offset_right = 464.0
-offset_bottom = 73.0
+offset_left = 77.75
+offset_top = 31.750004
+offset_right = 227.75
+offset_bottom = 77.75
 theme_override_fonts/font = ExtResource("4_kvpfn")
 theme_override_font_sizes/font_size = 45
 text = "0"
 
 [node name="Blood" type="Sprite2D" parent="Camera2D" unique_id=969161753]
-position = Vector2(288, 46)
+position = Vector2(51.75, 50.750004)
 scale = Vector2(4.4687505, 4.4687505)
 texture = ExtResource("11_kvuet")
 
@@ -255,8 +185,25 @@ frame = 16
 wait_time = 16.0
 one_shot = true
 
+[node name="Panel" type="Panel" parent="Camera2D" unique_id=888299556]
+process_mode = 3
+visible = false
+z_index = 500
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_trtic")
+script = ExtResource("13_ir15t")
+
+[node name="SkillTree" parent="Camera2D/Panel" unique_id=798146474 instance=ExtResource("13_trtic")]
+z_index = 1000
+layout_mode = 1
+
+[node name="Button" type="Button" parent="Camera2D" unique_id=223213088]
+process_mode = 3
+offset_left = 1780.0
+offset_top = 17.0
+offset_right = 1892.0
+offset_bottom = 129.0
+
 [connection signal="timeout" from="Camera2D/GameManager/Timer" to="Camera2D/GameManager" method="_on_timer_timeout"]
-[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer/Damage" to="Camera2D/GridContainer/MarginContainer/Damage" method="_on_pressed"]
-[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer2/Cooldown" to="Camera2D/GridContainer/MarginContainer2/Cooldown" method="_on_pressed"]
-[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer3/Ranged" to="Camera2D/GridContainer/MarginContainer3/Ranged" method="_on_pressed"]
-[connection signal="pressed" from="Camera2D/GridContainer/MarginContainer4/Special" to="Camera2D/GridContainer/MarginContainer4/Special" method="_on_pressed"]
+[connection signal="pressed" from="Camera2D/Button" to="Camera2D/Panel" method="_on_button_pressed"]

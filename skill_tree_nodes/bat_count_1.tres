@@ -14,4 +14,8 @@ cannot_buy_texture = ExtResource("2_dg7eo")
 can_buy_texture = ExtResource("1_2q8wi")
 unlocked_texture = ExtResource("4_i7nik")
 requirements = Array[ExtResource("1_x51p0")]([ExtResource("4_dg7eo")])
+stat_changes = {
+"bat_count": 3
+}
+blood_price = 45
 metadata/_custom_type_script = "uid://rpk1yuwxtc1u"

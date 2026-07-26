@@ -21,8 +21,9 @@ var attack_direction: Vector2 = Vector2(1, 0)
 @export var attack_cooldown = 0.4
 @export var attack_size = 10
 
-@export var special_bat_count = 3
-@export var special_bat_damage = 2
+@export var bats_unlocked = false
+@export var bat_count = 3
+@export var bat_damage = 2
 
 func update_cooldown_timer():
 	timer.wait_time = attack_cooldown
@@ -32,10 +33,11 @@ func update_cooldown_timer():
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("action2") and special_timer.is_stopped():
-		special.activate(special_bat_count, special_bat_damage)
-		special_timer.start()
-		animated_sprite_2d.frame = 0
-		animated_sprite_2d.play()
+		if bats_unlocked:
+			special.activate(bat_count, bat_damage)
+			special_timer.start()
+			animated_sprite_2d.frame = 0
+			animated_sprite_2d.play()
 
 	mouse_pos = get_local_mouse_position()
 
