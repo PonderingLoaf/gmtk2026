@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://8pa2n27v2h6h"]
+
+[ext_resource type="Script" uid="uid://b6yjkpbj1j4kb" path="res://skill_tooltip.gd" id="1_thc64"]
+[ext_resource type="FontFile" uid="uid://dyv81mk2dmo4t" path="res://assets/Minecraft.ttf" id="2_1kcj2"]
+[ext_resource type="Texture2D" uid="uid://dmskavrcl8fi6" path="res://assets/blood.png" id="3_1kcj2"]
+
+[node name="Skill_Tooltip" type="PanelContainer" unique_id=1288258643]
+offset_right = 332.0
+offset_bottom = 117.0
+script = ExtResource("1_thc64")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=848224416]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=369052957]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1095800801]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 7
+
+[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2" unique_id=1139477977]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1kcj2")
+theme_override_font_sizes/font_size = 20
+text = "Bat Special Attack"
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=166981756]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 26
+theme_override_constants/margin_bottom = 7
+
+[node name="Cost" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer" unique_id=683239612]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1kcj2")
+theme_override_font_sizes/font_size = 20
+text = "150"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1179241989]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 0
+
+[node name="Description" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1077015298]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1kcj2")
+text = "Summon a flurry of bats to your side"
+
+[node name="Blood" type="Sprite2D" parent="VBoxContainer/MarginContainer2" unique_id=1186068879]
+position = Vector2(319, -22)
+scale = Vector2(1.875, 1.875)
+texture = ExtResource("3_1kcj2")

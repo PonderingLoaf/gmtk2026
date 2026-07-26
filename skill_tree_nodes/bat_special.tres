@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://cnj5q815j64y3"]
+
+[ext_resource type="Script" uid="uid://rpk1yuwxtc1u" path="res://skill_data.gd" id="1_hg6qx"]
+[ext_resource type="Texture2D" uid="uid://yktio1s1mitv" path="res://assets/skill_tree_icons/can_buy/bat_special.png" id="1_p7ey3"]
+[ext_resource type="Texture2D" uid="uid://b4fgrjp88mbo0" path="res://assets/skill_tree_icons/cannot_buy/bat_special.png" id="2_d0fwh"]
+[ext_resource type="Texture2D" uid="uid://bc8lmxdpsst2m" path="res://assets/skill_tree_icons/bought/bat_specialt.png" id="4_3v45t"]
+
+[resource]
+script = ExtResource("1_hg6qx")
+skill_name = "Bats"
+description = "Spawns a flurry of bats"
+cannot_buy_texture = ExtResource("2_d0fwh")
+can_buy_texture = ExtResource("1_p7ey3")
+unlocked_texture = ExtResource("4_3v45t")
+metadata/_custom_type_script = "uid://rpk1yuwxtc1u"

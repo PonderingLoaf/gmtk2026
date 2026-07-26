@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://byuv1ihi4ap8r"]
+
+[ext_resource type="PackedScene" uid="uid://bsypju6iur7yi" path="res://skill_node.tscn" id="1_fmctd"]
+[ext_resource type="Script" uid="uid://c1w4glrlrol7e" path="res://line_drawer.gd" id="1_wpi0c"]
+[ext_resource type="Resource" uid="uid://cnj5q815j64y3" path="res://skill_tree_nodes/bat_special.tres" id="2_802jk"]
+[ext_resource type="Texture2D" uid="uid://yktio1s1mitv" path="res://assets/skill_tree_icons/can_buy/bat_special.png" id="2_t5gwv"]
+[ext_resource type="Texture2D" uid="uid://mugqmuqw2cg1" path="res://assets/skill_tree_icons/can_buy/bat_damage.png" id="4_itn7s"]
+[ext_resource type="Resource" uid="uid://dl1qnngkek8ly" path="res://skill_tree_nodes/bat_damage_1.tres" id="5_feiep"]
+[ext_resource type="PackedScene" uid="uid://8pa2n27v2h6h" path="res://skill_tooltip.tscn" id="6_feiep"]
+[ext_resource type="Texture2D" uid="uid://dqp76cycb7sfg" path="res://assets/skill_tree_icons/can_buy/bat_count.png" id="7_6mqne"]
+[ext_resource type="Resource" uid="uid://cjtrth4ed82qx" path="res://skill_tree_nodes/bat_count_1.tres" id="7_87dja"]
+
+[node name="SkillTree" type="Control" unique_id=798146474]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wpi0c")
+
+[node name="Bat_Special" parent="." unique_id=1187275591 node_paths=PackedStringArray("tooltip_node") instance=ExtResource("1_fmctd")]
+layout_mode = 0
+offset_left = 954.0
+offset_top = 490.0
+offset_right = 1018.0
+offset_bottom = 554.0
+rotation = 0.7853982
+texture_normal = ExtResource("2_t5gwv")
+stretch_mode = 0
+data = ExtResource("2_802jk")
+tooltip_node = NodePath("../Skill_Tooltip")
+
+[node name="Bat_Damage_1" parent="Bat_Special" unique_id=2008888272 node_paths=PackedStringArray("tooltip_node") instance=ExtResource("1_fmctd")]
+layout_mode = 0
+offset_left = -164.0
+offset_right = -100.0
+offset_bottom = 64.0
+texture_normal = ExtResource("4_itn7s")
+stretch_mode = 0
+data = ExtResource("5_feiep")
+tooltip_node = NodePath("../../Skill_Tooltip")
+
+[node name="Line" type="Line2D" parent="Bat_Special/Bat_Damage_1" unique_id=1443263446]
+z_index = -3
+position = Vector2(164, 3.0517578e-05)
+points = PackedVector2Array(32, 32, -132, 32)
+width = 5.44
+
+[node name="Bat_Count_1" parent="Bat_Special" unique_id=467053121 node_paths=PackedStringArray("tooltip_node") instance=ExtResource("1_fmctd")]
+layout_mode = 0
+offset_top = -164.0
+offset_right = 64.0
+offset_bottom = -100.0
+texture_normal = ExtResource("7_6mqne")
+stretch_mode = 0
+data = ExtResource("7_87dja")
+tooltip_node = NodePath("../../Skill_Tooltip")
+
+[node name="Line" type="Line2D" parent="Bat_Special/Bat_Count_1" unique_id=1042859481]
+z_index = -3
+position = Vector2(0, 164.00003)
+points = PackedVector2Array(32, 32, 32, -132)
+width = 5.44
+
+[node name="Skill_Tooltip" parent="." unique_id=1288258643 instance=ExtResource("6_feiep")]
+visible = false
+layout_mode = 0

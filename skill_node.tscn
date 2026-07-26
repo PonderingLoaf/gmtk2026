@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bsypju6iur7yi"]
+
+[ext_resource type="Script" uid="uid://bay02d1grjv64" path="res://skill_node.gd" id="1_m8cli"]
+
+[node name="SkillNode" type="TextureButton" unique_id=1187275591]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_m8cli")

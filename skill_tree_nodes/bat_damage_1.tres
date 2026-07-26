@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://dl1qnngkek8ly"]
+
+[ext_resource type="Texture2D" uid="uid://mugqmuqw2cg1" path="res://assets/skill_tree_icons/can_buy/bat_damage.png" id="1_ryfq2"]
+[ext_resource type="Script" uid="uid://rpk1yuwxtc1u" path="res://skill_data.gd" id="1_uq341"]
+[ext_resource type="Texture2D" uid="uid://2tryupmno12d" path="res://assets/skill_tree_icons/cannot_buy/bat_damage.png" id="2_lx0mr"]
+[ext_resource type="Texture2D" uid="uid://caydcq78uacrp" path="res://assets/skill_tree_icons/bought/bat_damage.png" id="4_761co"]
+[ext_resource type="Resource" uid="uid://cnj5q815j64y3" path="res://skill_tree_nodes/bat_special.tres" id="4_lx0mr"]
+
+[resource]
+script = ExtResource("1_uq341")
+skill_name = "Stronger Bats"
+description = "Bat Damage 2 -> 5"
+cannot_buy_texture = ExtResource("2_lx0mr")
+can_buy_texture = ExtResource("1_ryfq2")
+unlocked_texture = ExtResource("4_761co")
+requirements = Array[ExtResource("1_uq341")]([ExtResource("4_lx0mr")])
+metadata/_custom_type_script = "uid://rpk1yuwxtc1u"
